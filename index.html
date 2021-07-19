@@ -80,7 +80,7 @@
 
             <!-- User Account -->
             <div class="action">
-                <div class="profile" onclick="menuToggle();">
+                <div class="profile">
                     <img src="https://cdn.discordapp.com/avatars/370624328200355843/a_2c9903b11883e980e84d43b9002fc040.gif?size=2048" />
                 </div>
                 <div class="menu">
@@ -285,6 +285,31 @@
                                     </div>
                                 </div>
                             </div>
+
+                            <!-- 5 -->
+                            <div class="cards">
+                                <div class="background-cards" style="justify-content: center;">
+                                    <img src="https://cdn.discordapp.com/banners/370624328200355843/03b633a9847146149f4353a8f22d53ed.png?size=512" alt="Background Cheryt" />
+                                </div>
+                                <div class="imgBx">
+                                    <img src="https://cdn.discordapp.com/avatars/750203672310579250/a_3df542b97e2dc3ba77abac3536d50494.gif?size=2048" alt="Perfil Quesito" />
+                                </div>
+                                <div class="content">
+                                    <div class="details">
+                                        <h2>Quesito <br> <span>Challenger Promedio</span></h2>
+                                        <ul class="social_icons">
+                                            <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                                            <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                                            <li><a href="#"><i class="fab fa-github"></i></a></li>
+                                            <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+                                        </ul>
+                                        <div>
+                                            <a href="">Saber Más</a>
+                                            <a href="">Tecnologias</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -355,6 +380,12 @@
             const signUp = document.querySelector('.signupGeneral');
             const closeMenu = document.querySelector('.closeWindow');
             const body = document.querySelector('body');
+            const toggleMenu = document.querySelector('.profile');
+            const menu = document.querySelector('.menu');
+
+            toggleMenu.onclick = function(){
+                menu.classList.toggle('active');
+            }
 
             // Cambiar Tema
             btnSwitch.onclick = function(){
