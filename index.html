@@ -3,7 +3,8 @@
     <head>
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minumu-scale=1.0" />
-        <title>Cheryt | La Pagina Que Deseas</title>
+        <link rel="icon" href="./assets/img/Logo.svg" />
+        <title>Ametist | La Pagina Que Deseas</title>
         <link rel="stylesheet" href="./assets/css/styles.css">
         <script src="https://cdn.jsdelivr.net/npm/pace-js@latest/pace.min.js"></script>
         <script src="https://kit.fontawesome.com/158739efff.js" crossorigin="anonymous"></script>
@@ -11,13 +12,24 @@
         <!-- https://www.youtube.com/watch?v=5wMGPptPRjQ -->
         <!-- https://www.youtube.com/watch?v=KUroRG85Szs -->
         <!-- https://www.youtube.com/watch?v=s_z5laE4KTw -->
-        <!-- Push pin andres gay-->
+        <!-- Push pin andres gay Materialize-->
     </head>
     <body>
         <div class="closeWindow"></div>
         <div class="Principal">
             <div class="navigation">
                 <ul>
+                    <li class="list">
+                        <b></b>
+                        <b></b>
+                        <a href="#">
+                            <span class="icon">
+                                <img src="./assets/img/LogoBlanco.svg" class="inactive" />
+                                <img src="./assets/img/LogoGris.svg" class="active" />
+                            </span>
+                            <span class="title">Nuestros Proyectos</span>
+                        </a>
+                    </li>
                     <li class="list active">
                         <b></b>
                         <b></b>
@@ -38,7 +50,7 @@
                         <b></b>
                         <b></b>
                         <a href="#AboutUs">
-                            <span class="icon"><i class="fas fa-question-circle"></i></span>
+                            <span class="icon"><i class="fas fa-info-circle"></i></span>
                             <span class="title">Acerca De Nosotros</span>
                         </a>
                     </li>
@@ -65,6 +77,24 @@
                 <i class="fas fa-bars open"></i>
                 <i class="fas fa-times close"></i>
             </div>
+
+            <!-- User Account -->
+            <div class="action">
+                <div class="profile" onclick="menuToggle();">
+                    <img src="https://cdn.discordapp.com/avatars/370624328200355843/a_2c9903b11883e980e84d43b9002fc040.gif?size=2048" />
+                </div>
+                <div class="menu">
+                    <h3>Someone Famous<br><span>Website Designer</span></h3>
+                    <ul>
+                        <li><i class="fas fa-user"></i><a href="">Mi Perfil</a></li>
+                        <li><i class="fas fa-edit"></i><a href="">Editar</a></li>
+                        <li><i class="fas fa-envelope"></i><a href="">Bandeja de entrada</a></li>
+                        <li><i class="fas fa-user-cog"></i><a href="">Ajustes de cuenta</a></li>
+                        <li><i class="fas fa-question-circle"></i><a href="">Ayuda</a></li>
+                        <li><i class="fas fa-sign-out-alt"></i><a href="">Cerrar Sesión</a></li>
+                    </ul>
+                </div>
+            </div>
             <!-- Landing Page -->
             <div class="container-general">
                 <div class="padding">
@@ -75,9 +105,9 @@
                         <div class="drop"></div>
                         <!--<img src="https://i.gifer.com/1kc1.gif" alt="Home Img" />-->
                         <div class="landing-text">
-                            <div>
-                                <h1>Dejalo en nuestras manos</h1><br>
-                                <h2></h2>
+                            <div class="container-title">
+                                <h1 style="position: relative;">Dejalo En Nuestras Manos</h1>
+                                <div class="sparkles-text"><img src="https://discord.com/assets/a188414ce83f2454b9d71a47c3d95909.svg" /></div>
                             </div>
                         </div>
                         <div class="arrow">
@@ -94,7 +124,7 @@
                             <div class="box">
                                 <div class="content">
                                     <h2>01</h2>
-                                    <h3>Card One</h3>
+                                    <h3>Servicio Normal</h3>
                                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro, quam, repellendus repudiandae non temporibus praesentium voluptates dicta magni libero sunt asperiores, voluptatum fugiat officia dolore ex repellat vitae! Laudantium, officiis!</p>
                                     <a href="#">Read More</a>
                                 </div>
@@ -104,7 +134,7 @@
                             <div class="box">
                                 <div class="content">
                                     <h2>02</h2>
-                                    <h3>Card Two</h3>
+                                    <h3>Servicio Premium</h3>
                                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro, quam, repellendus repudiandae non temporibus praesentium voluptates dicta magni libero sunt asperiores, voluptatum fugiat officia dolore ex repellat vitae! Laudantium, officiis!</p>
                                     <a href="#">Read More</a>
                                 </div>
@@ -114,7 +144,7 @@
                             <div class="box">
                                 <div class="content">
                                     <h2>03</h2>
-                                    <h3>Card Three</h3>
+                                    <h3>Servicio Ultra</h3>
                                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro, quam, repellendus repudiandae non temporibus praesentium voluptates dicta magni libero sunt asperiores, voluptatum fugiat officia dolore ex repellat vitae! Laudantium, officiis!</p>
                                     <a href="#">Read More</a>
                                 </div>
@@ -148,6 +178,10 @@
                                             <li><a href="#"><i class="fab fa-github"></i></a></li>
                                             <li><a href="#"><i class="fab fa-instagram"></i></a></li>
                                         </ul>
+                                        <div>
+                                            <a href="">Saber Más</a>
+                                            <a href="">Tecnologias</a>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -155,7 +189,7 @@
                             <!-- 1 -->
                             <div class="cards">
                                 <div class="background-cards">
-                                    <img src="https://cdn.discordapp.com/banners/493518553157468170/a_8df095d3bf6b220ff972229be1348495.png?size=512" alt="Background Monoe"/>
+                                    <img src="https://cdn.discordapp.com/attachments/605578839598432277/866435932911304734/iLWcz2.gif" alt="Background Monoe"/>
                                 </div>
                                 <div class="imgBx">
                                     <img src="https://cdn.discordapp.com/avatars/493518553157468170/a_020ee078e7c254c8de0832994504ddd7.gif?size=2048" alt="Perfil Monoe" />
@@ -169,6 +203,10 @@
                                             <li><a href="#"><i class="fab fa-github"></i></a></li>
                                             <li><a href="#"><i class="fab fa-instagram"></i></a></li>
                                         </ul>
+                                        <div>
+                                            <a href="">Saber Más</a>
+                                            <a href="">Tecnologias</a>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -190,6 +228,10 @@
                                             <li><a href="#"><i class="fab fa-github"></i></a></li>
                                             <li><a href="#"><i class="fab fa-instagram"></i></a></li>
                                         </ul>
+                                        <div>
+                                            <a href="">Saber Más</a>
+                                            <a href="">Tecnologias</a>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -202,15 +244,19 @@
                                 <div class="imgBx">
                                     <img src="https://cdn.discordapp.com/avatars/852702154367041576/a_6a55d1f19ee29b8cb22797ff6b8a4ecb.gif?size=2048" alt="Perfil Iwaduu"/>
                                 </div>
-                                <div class="content">
+                                <div class="content comedia">
                                     <div class="details">
-                                        <h2>Iwaduu <br> <span>Comediante.</span></h2>
+                                        <h2 style="color: #333;background: rgba(255, 255, 255, 0.9);width:100%">Iwaduu <br> <span>Comediante.</span></h2>
                                         <ul class="social_icons">
                                             <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
                                             <li><a href="#"><i class="fab fa-twitter"></i></a></li>
                                             <li><a href="#"><i class="fab fa-github"></i></a></li>
                                             <li><a href="#"><i class="fab fa-instagram"></i></a></li>
                                         </ul>
+                                        <!--<div>
+                                            <a href="">Saber Más</a>
+                                            <a href="">Tecnologias</a>
+                                        </div>-->
                                     </div>
                                 </div>
                             </div>
@@ -232,6 +278,10 @@
                                             <li><a href="#"><i class="fab fa-github"></i></a></li>
                                             <li><a href="#"><i class="fab fa-instagram"></i></a></li>
                                         </ul>
+                                        <div>
+                                            <a href="">Saber Más</a>
+                                            <a href="">Tecnologias</a>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
