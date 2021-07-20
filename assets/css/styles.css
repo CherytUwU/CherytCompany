@@ -63,6 +63,68 @@ body.dark-mode
 /*
 *
 */
+/* WaveAnimation */
+.container-general .wave
+{
+    position: absolute;
+    width: 100%;
+    height: 143px;
+    bottom: 0;
+    left: 0;
+    background-image: url(./../img/wave.png);
+    animation: animate 10s linear infinite;
+}
+body.dark-mode .container-general .wave
+{
+    display: none;
+}
+.container-general .wave::before
+{
+    content: "";
+    width: 100%;
+    height: 143px;
+    background-image: url(./../img/wave.png);
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0.4;
+    animation: animate-reverse 10s linear infinite;
+}
+.container-general .wave::after
+{
+    content: "";
+    width: 100%;
+    height: 143px;
+    background-image: url(./../img/wave.png);
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0.4;
+    animation-delay: -5px;
+    animation: animate 20s linear infinite;
+}
+@keyframes animate
+{
+    0%
+    {
+        background-position: 0;
+    }
+    100%
+    {
+        background-position: 1360px;
+    }
+}
+@keyframes animate-reverse
+{
+    0%
+    {
+        background-position: 1360px;
+    }
+    100%
+    {
+        background-position: 0;
+    }
+}
 /*
 *
 */
@@ -605,6 +667,14 @@ body.dark-mode .landing-page .landing-text
 /*
 *
 */
+#Suscription
+{
+    background: var(--light-primary);
+}
+body.dark-mode #Suscription
+{
+    background: var(--dark-one)
+}
 .containerBuy
 {
    display: flex; 
@@ -629,6 +699,37 @@ body.dark-mode .landing-page .landing-text
     border-radius: 15px;
     margin: 30px;
 }
+.containerBuy .cardBuy .box::after
+{
+  content: '';
+  position: absolute;
+  top: calc(-1 * 3px);
+  left: calc(-1 * 3px);
+  height: calc(100% + 3px * 2);
+  width: calc(100% + 3px * 2);
+  background: linear-gradient(60deg, #f79533, #f37055, #ef4e7b, #a166ab, #5073b8, #1098ad, #07b39b, #6fba82);
+  border-radius: calc(2 * 3px);
+  z-index: -1;
+  animation: animatedgradient 3s ease alternate infinite;
+  background-size: 300% 300%;
+  opacity: 0;
+  transition: .3s;
+}
+.containerBuy .cardBuy:hover .box::after
+{
+    opacity: 1;
+}
+@keyframes animatedgradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
 body.dark-mode .containerBuy .cardBuy
 {
     box-shadow: inset 5px 5px 5px rgba(255,255,255,0.05),
@@ -650,6 +751,7 @@ body.dark-mode .containerBuy .cardBuy
   justify-content: center;
   align-items: center;
   transition: .5s;
+  z-index: 1;
 }
 body.dark-mode .containerBuy .cardBuy .box
 {
@@ -660,7 +762,6 @@ body.dark-mode .containerBuy .cardBuy .box
 {
     transform: translateY(-50px);
     box-shadow: 0 10px 40px rgba(0,0,0,0.2);
-    background: linear-gradient(45deg, var(--general-blurple), var(--dark-blue-primary));
 }
 body.dark-mode .containerBuy .cardBuy:hover .box
 {
@@ -671,6 +772,17 @@ body.dark-mode .containerBuy .cardBuy:hover .box
 {
     padding: 20px;
     text-align: center;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: var(--light-primary);
+    border-radius: 3px;
+}
+body.dark-mode .containerBuy .cardBuy .box .content
+{
+    background: var(--light-quintinary)
 }
 .containerBuy .cardBuy .box .content h2
 {
@@ -684,7 +796,7 @@ body.dark-mode .containerBuy .cardBuy:hover .box
 }
 .containerBuy .cardBuy:hover .box .content h2
 {
-    color: rgba(255,255,255,0.05);
+    color: rgba(0,0,0,0.05);
 }
 .containerBuy .cardBuy .box .content h3
 {
@@ -696,7 +808,7 @@ body.dark-mode .containerBuy .cardBuy:hover .box
 .containerBuy .cardBuy:hover .box .content h3,
 .containerBuy .cardBuy:hover .box .content p
 {
-    color: #fff;
+    color: #333;
 }
 .containerBuy .cardBuy .box .content p
 {
